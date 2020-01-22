@@ -1,0 +1,24 @@
+{
+  "name": "talpa-test-app",
+  "version": "1.0.0",
+  "description": "Server Side test application",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "graphql": "^14.5.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AChuyan/talpa-test-app.git"
+  },
+  "author": "Oleksii Chuian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AChuyan/talpa-test-app/issues"
+  },
+  "homepage": "https://github.com/AChuyan/talpa-test-app#readme"
+}

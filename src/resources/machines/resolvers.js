@@ -1,4 +1,4 @@
-import { machineMock } from '../../mocks/index'
+import { machineMock } from '../../mocks/index';
 
 const getMachines = () => {
     // TODO load from DB

@@ -1,17 +1,19 @@
+export const typeDefs = `
 type GPSPosition {
     lat: String!
-    long: String!
+    lng: String!
 }
 
 type Sensor {
+    id: ID!
     name: String!
     machine: Machine!
 }
 
 type Machine {
-    id: ID
+    id: ID!
     name: String!
-    sensors: [Sensor!]
+    sensors: [Sensor]
     lastKnownPosition: GPSPosition
 }
 
@@ -21,3 +23,6 @@ input MachineWhereUniqInput {
     sensors: [Sensor!]
     lastKnownPosition: GPSPosition
 }
+`;
+
+export default typeDefs;

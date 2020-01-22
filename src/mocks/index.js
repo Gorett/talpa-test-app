@@ -1,6 +1,6 @@
 export const gpsPositionMock = {
     lat: '51.45657',
-    long: ', 7.01228',
+    lng: ', 7.01228',
 };
 
 export const sensorMock = {

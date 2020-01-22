@@ -1,0 +1,23 @@
+type GPSPosition {
+    lat: String!
+    long: String!
+}
+
+type Sensor {
+    name: String!
+    machine: Machine!
+}
+
+type Machine {
+    id: ID
+    name: String!
+    sensors: [Sensor!]
+    lastKnownPosition: GPSPosition
+}
+
+input MachineWhereUniqInput {
+    id: ID!
+    name: String!
+    sensors: [Sensor!]
+    lastKnownPosition: GPSPosition
+}

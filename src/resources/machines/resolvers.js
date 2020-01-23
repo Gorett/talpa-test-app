@@ -1,16 +1,11 @@
-import { machineMock } from '../../mocks/index';
+import { machineListMock } from '../../mocks/index';
 
-const getMachine = (context, id) => {
-    return machineMock;
+export const getMachine = (context, { id }) => {
+    return machineListMock.find(item => item.id === id);
 };
 
-const getMachines = () => {
-    // TODO load from DB
-    return [machineMock];
-};
-
-const updateMachine = (input) => {
-    // TODO implement update functionality
+export const getMachines = () => {
+    return machineListMock;
 };
 
 export const resolvers = {

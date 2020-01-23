@@ -2,8 +2,8 @@ import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import { buildSchema } from 'graphql';
 
-import machinesSchema from './src/resources/machines/schema';
-import machinesResolvers from './src/resources/machines/resolvers';
+import machinesSchema from './resources/machines/schema';
+import machinesResolvers from './resources/machines/resolvers';
 
 const root = machinesResolvers;
 

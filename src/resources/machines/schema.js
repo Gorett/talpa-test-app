@@ -1,5 +1,6 @@
 export const typeDefs = `
 type GPSPosition {
+    id: ID!
     lat: String!
     lng: String!
 }
@@ -17,11 +18,16 @@ type Machine {
     lastKnownPosition: GPSPosition
 }
 
+type Query {
+    machine(id: ID!): Machine
+    machines: [Machine]
+}
+
 input MachineWhereUniqInput {
     id: ID!
     name: String!
-    sensors: [Sensor!]
-    lastKnownPosition: GPSPosition
+    sensors: [ID!]
+    lastKnownPosition: ID
 }
 `;
 

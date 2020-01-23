@@ -1,5 +1,9 @@
 import { machineMock } from '../../mocks/index';
 
+const getMachine = (context, id) => {
+    return machineMock;
+};
+
 const getMachines = () => {
     // TODO load from DB
     return [machineMock];
@@ -11,6 +15,7 @@ const updateMachine = (input) => {
 
 export const resolvers = {
     Query: {
+        machine: getMachine,
         machines: getMachines,
     },
 };

@@ -20,7 +20,7 @@ type Machine {
 
 type Query {
     machine(id: ID!): Machine
-    machines: [Machine]
+    machines: [Machine]!
 }
 
 input MachineWhereUniqInput {

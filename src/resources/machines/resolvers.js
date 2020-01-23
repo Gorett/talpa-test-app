@@ -11,10 +11,7 @@ const updateMachine = (input) => {
 
 export const resolvers = {
     Query: {
-        getMachines,
-    },
-    Mutation: {
-        updateMachine,
+        machines: getMachines,
     },
 };
 

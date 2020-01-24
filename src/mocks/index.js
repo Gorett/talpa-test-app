@@ -1,9 +1,16 @@
 const createSensorData = () => ({
-  time: new Date().getTime(),
+  time: new Date().toString(),
   value: Math.random(),
 });
 
-const generateSensorData = () => new Array(Math.floor(Math.random() * 30) + 1).fill(createSensorData());
+const randomInteger = (min, max) => {
+  let rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
+};
+
+const generateSensorData = () => new Array(randomInteger(5, 15))
+  .fill('')
+  .map(() => createSensorData());
 
 export const gpsPositionMock1 = {
   id: 'ask12g12op8sl1',

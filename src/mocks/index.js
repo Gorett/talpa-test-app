@@ -1,16 +1,17 @@
-const createSensorData = () => ({
-  time: new Date().toString(),
-  value: Math.random(),
-});
-
 const randomInteger = (min, max) => {
   let rand = min - 0.5 + Math.random() * (max - min + 1);
   return Math.round(rand);
 };
 
+const createSensorData = () => ({
+  time: new Date(2020, 0, randomInteger(0, 20), randomInteger(0, 23), randomInteger(0, 59)).toString(),
+  value: Math.random(),
+});
+
 const generateSensorData = () => new Array(randomInteger(5, 15))
   .fill('')
-  .map(() => createSensorData());
+  .map(() => createSensorData())
+  .sort((a, b) => new Date(a.time) - new Date(b.time));
 
 export const gpsPositionMock1 = {
   id: 'ask12g12op8sl1',

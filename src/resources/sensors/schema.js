@@ -10,6 +10,11 @@ type Sensor {
     machine: Machine!
     data: [SensorData!]
 }
+
+input SensorFilters {
+    id: ID!
+    timestamp: String!
+}
 `;
 
 export default typeDefs;

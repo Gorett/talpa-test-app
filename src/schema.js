@@ -13,7 +13,7 @@ export const Query = `
 type Query {
     machine(id: ID!): Machine
     machines: [Machine]!
-    sensor(id: ID!): Sensor
+    sensor(filters: SensorFilters): Sensor
     sensors: [Sensor]!
 }
 `;

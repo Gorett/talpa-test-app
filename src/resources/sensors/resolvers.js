@@ -1,7 +1,7 @@
 import { sensorListMock } from '../../mocks/index';
 
-export const getSensor = (context, { id }) => {
-    return sensorListMock.find(item => item.id === id);
+export const getSensor = (context, { filters }) => {
+    return sensorListMock.find(item => item.id === filters.id);
 };
 
 export const getSensors = () => {
